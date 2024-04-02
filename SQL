@@ -1,0 +1,23 @@
+-- SELECT *
+-- FROM oders o
+-- JOIN customers c
+-- 	ON o.customers_id = c.customer_id
+
+-- SELECT *
+-- FROM orders o, customers c
+-- WHERE o.customer_id = c.customer_id
+
+-- INNEJ JOIN (INNER is optional)
+-- OUTER JOIN
+
+-- OUTER join allows us to join customers, weather they have an order or not OUTER keyword is optional
+-- LEFT table is the one above, the FROM table, and they are retured, weather the condition is true or not
+
+SELECT 
+	c.customer_id,
+    c.first_name,
+	o.order_id
+FROM customers c
+RIGHT JOIN orders o
+	ON c.customer_id = o.customer_id
+ORDER BY c.customer_id
