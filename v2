@@ -1,0 +1,7 @@
+SELECT 
+	p.product_id,
+    p.name,
+    oi.quantity
+FROM sql_store.products p
+LEFT join sql_store.order_items oi
+	ON p.product_id = oi.product_id
